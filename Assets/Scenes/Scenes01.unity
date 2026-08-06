@@ -1928,10 +1928,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47224dea97f60ca4a95ab8161b2b8aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  forcePower: 10
+  forcePower: 5
   rb: {fileID: 0}
   point: 0
-  hp: 0
+  hp: 100
 --- !u!1001 &2088380202
 PrefabInstance:
   m_ObjectHideFlags: 0

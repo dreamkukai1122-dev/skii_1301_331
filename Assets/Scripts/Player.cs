@@ -33,12 +33,20 @@ public class Player : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        moveAction = InputSystem.actions.FindAction("Move");
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        MoveLeftOrRight();
     }
+
+    private void MoveLeftOrRight()
+    {
+        moveValue = moveAction.ReadValue<Vector2>();
+        rb.AddForce(moveValue.x * Vector3.right * forcePower);
+    }
+
 }
