@@ -23,6 +23,7 @@ public class Tree : MonoBehaviour
         Player player = collision.gameObject.GetComponent<Player>();
         if (player == null)
             return;
+        player.HP -= 15;
     }
 
     private void OnCollisionExit(Collision collision)
