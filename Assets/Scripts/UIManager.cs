@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -37,11 +38,12 @@ public class UIManager : MonoBehaviour
     }
     public void RestartGame() 
     {
-        player.transform.position = new Vector3(0f, 87f, -85f);
-        player.HP = 100;
-        ShowNotiText("RESTART");
-        ShowHideRestartButton(false);
+        //player.transform.position = new Vector3(0f, 87f, -85f);
+        //player.HP = 100;
+        //ShowNotiText("RESTART");
+        //ShowHideRestartButton(false);
         Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ShowHideRestartButton(bool flag)

@@ -8,5 +8,7 @@ public class Finish : MonoBehaviour
         if (player == null)
             return;
         UIManager.Instance.ShowNotiText($"YOU WINNNNN!\nPoin: {player.Point}");
+        Time.timeScale = 0f;
+        UIManager.Instance.ShowHideRestartButton(true);
     }
 }
